@@ -1,0 +1,11 @@
+{
+  "name": "@nxpm/ci",
+  "version": "1.6.0",
+  "main": "src/index.js",
+  "schematics": "./collection.json",
+  "homepage": "https://github.com/nxpm/stack",
+  "bugs": {
+    "url": "https://github.com/nxpm/stack/issues"
+  },
+  "license": "MIT"
+}
