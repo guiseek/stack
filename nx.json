@@ -1,0 +1,49 @@
+{
+  "npmScope": "nxpm",
+  "affected": {
+    "defaultBase": "main"
+  },
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "accessToken": "MmIzYjBiMmEtOGZkOS00ZDI1LWI5MjYtMmVhYTNhZjFjMDI2fHJlYWQtd3JpdGU=",
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true,
+        "scan": true
+      }
+    }
+  },
+  "projects": {
+    "stack": {
+      "tags": [],
+      "implicitDependencies": ["ci"]
+    },
+    "stack-e2e": {
+      "tags": [],
+      "implicitDependencies": ["stack"]
+    },
+    "ci": {
+      "tags": []
+    },
+    "ci-e2e": {
+      "tags": [],
+      "implicitDependencies": ["ci"]
+    }
+  },
+  "workspaceLayout": {
+    "appsDir": "e2e",
+    "libsDir": "packages"
+  }
+}
